@@ -1,26 +1,20 @@
-version: '3.8'
+versions: "3.8"
 services:
   movies:
-    image: hpakala53/paytmmovies:latest
+    image: ghaffarbajwa9/paymovies:latest
     ports:
       - "81:80"
     deploy:
       replicas: 3
   train:
-    image: hpakala53/paytmtrain:latest
+    image: ghaffarbajwa9/paytrain:latest
     ports:
       - "82:80"
     deploy:
       replicas: 3
-  dth:
-    image: hpakala53/paytmdth:latest
+  tickets:
+    image: ghaffarbajwa9/paytickets:latest
     ports:
       - "83:80"
-    deploy:
-      replicas: 3
-  recharge:
-    image: hpakala53/paytmrecharge:latest
-    ports:
-      - "84:80"
     deploy:
       replicas: 3
